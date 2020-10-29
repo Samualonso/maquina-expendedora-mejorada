@@ -75,6 +75,7 @@ public class MaquinaExpendedoraMejorada {
             if (cantidadDeDineroQueFalta <= 0) {
                 billetesVendidos = billetesVendidos + 1;
                 int billetesConPremio = billetesVendidos % 3;
+                float valorDescuento = precioBillete * 0.1F;
                 // Simula la impresion de un billete
                 System.out.println("##################");
                 System.out.println("# Billete de tren:");
@@ -82,7 +83,7 @@ public class MaquinaExpendedoraMejorada {
                 System.out.println("# " + precioBillete + " euros.");
                 if(darPremio == true) {
                     if (billetesConPremio == 0) {
-                        System.out.println("¡Enhorabuena, has ganado un descuento del 10% para compras en el comercio que tú quieras!");
+                        System.out.println("¡Enhorabuena, has ganado un descuento de " + valorDescuento + " euros para compras en el comercio que tú quieras!");
                     }
                 }
                 System.out.println("##################");
